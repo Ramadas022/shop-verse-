@@ -1,0 +1,344 @@
+.hero {
+  max-width: 1280px;
+  min-height: 570px;
+
+  margin: 0 auto;
+  padding: 70px 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  background: #f5f7fa;
+}
+
+.hero-content {
+  max-width: 560px;
+}
+
+.hero-label,
+.section-label {
+  margin-bottom: 14px;
+
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.hero h1 {
+  margin-bottom: 22px;
+
+  color: #111111;
+
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.hero-description {
+  max-width: 480px;
+
+  margin-bottom: 32px;
+
+  color: #666666;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.primary-btn,
+.secondary-btn {
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 6px;
+
+  transition: all 0.2s ease;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid #dddddd;
+}
+
+.secondary-btn:hover {
+  border-color: #111111;
+}
+
+.hero-image {
+  height: 470px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* GENERAL SECTIONS */
+
+.section {
+  max-width: 1280px;
+
+  margin: 0 auto;
+  padding: 90px 40px;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+}
+
+.section-header h2 {
+  color: #111111;
+
+  font-size: 32px;
+  letter-spacing: -0.8px;
+}
+
+.view-all {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #111111;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.view-all:hover {
+  color: #2563eb;
+}
+
+
+/* CATEGORIES */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.category-card {
+  min-height: 190px;
+
+  padding: 25px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  background: #f5f5f5;
+
+  color: #111111;
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  transition: all 0.25s ease;
+}
+
+.category-card:hover {
+  background: #111111;
+  color: #ffffff;
+  transform: translateY(-4px);
+}
+
+.category-card span {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: #888888;
+
+  font-size: 12px;
+}
+
+.category-card h3 {
+  margin-bottom: 5px;
+
+  font-size: 22px;
+}
+
+.category-card p {
+  color: #777777;
+  font-size: 13px;
+}
+
+.category-card:hover p {
+  color: #cccccc;
+}
+
+.category-card svg {
+  transition: transform 0.2s ease;
+}
+
+.category-card:hover svg {
+  transform: translateX(5px);
+}
+
+
+/* PRODUCTS */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+
+/* PROMOTION */
+
+.promo-section {
+  max-width: 1200px;
+  min-height: 360px;
+
+  margin: 20px auto 90px;
+
+  padding: 60px;
+
+  display: flex;
+  align-items: center;
+
+  background: #111111;
+  color: #ffffff;
+
+  border-radius: 12px;
+}
+
+.promo-content {
+  max-width: 550px;
+}
+
+.promo-content .section-label {
+  color: #60a5fa;
+}
+
+.promo-content h2 {
+  margin-bottom: 18px;
+
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.promo-content p:not(.section-label) {
+  margin-bottom: 25px;
+
+  color: #aaaaaa;
+
+  line-height: 1.6;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero-image {
+    height: 350px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .section-header h2 {
+    font-size: 26px;
+  }
+
+  .category-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-section {
+    margin: 0 20px 60px;
+    padding: 40px 25px;
+  }
+
+  .promo-content h2 {
+    font-size: 32px;
+  }
+}
